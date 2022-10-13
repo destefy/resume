@@ -1,0 +1,180 @@
+%
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{4pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Stefan de Lasa} \\[7.5pt]
+\href{https://www.github.com/destefy/portfolio}{\raisebox{-0.05\height}\faGithub\ destefy } \ $|$ \ 
+\href{https://www.linkedin.com/in/stefandelasa}{\raisebox{-0.05\height}\faLinkedin\ stefandelasa} \ $|$ \ 
+\href{mailto:stefan.delasa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ stefan.delasa@gmail.com} \ $|$ \ 
+\href{tel:+6479208916}{\raisebox{-0.05\height}\faMobile \ +1(647)-920-8916} \\
+\end{tabularx}
+
+
+% Education
+\section{Education}
+Faculty of Applied Science \& Eng., BASc - Computer Engineering, University of Toronto, 2020-2025. 
+Seasonal GPA: 4.0 / 4.0, Cumulative GPA: 3.81 / 4.0, Dean’s Honour List.
+    
+% Skills
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming Languages: &  \normalsize{C++, C, Python, MATLAB, Javascript, Typescript, React, ARM Assembly}\\
+Programming Tools:  &  \normalsize{Git, VSCode, IntelliJ, Jira, Bitbucket, Jenkins, Cypress}\\  
+Hardware Tools: & \normalsize{Verilog, Multisim, ModelSim, Altium, Typhoon}
+\end{tabularx}
+
+% Experience
+\section{Work Experience}
+
+%PointClickCare
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Software Engineer Intern,} \textit{PointClickCare (PCC)} & \hfill May - Aug 2022, Toronto, ON \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+PCC creates healthcare software solutions to assist vulnerable populations with out-of-hospital care.
+\begin{minipage}[t][5.6cm]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \item Migrated the US “Care Insights” application to Canadian markets.
+        \begin{itemize}
+        \item Configured a backend \textbf{Spring Boot} controller to determine session permissions via API calls. Permissions were then used across different application workflows (e.g., exposing links, etc.)
+        \end{itemize}
+    \item Worked in a 10 person \textbf{Agile development} team on a suite of applications for nursing facilities.
+        \begin{itemize}
+        \item Used \textbf{React} and \textbf{Typescript} to develop front-end features to ease creation/modification of patient screening templates. Several internal users mentioned improved usability from this work.
+        \item To improve patient screening template effectiveness, I extracted session information about which end-user workflow suggestions were followed or ignored. I then sent this information to PCC’s Pendo analytics system for subsequent analysis and template refinement.
+        \item Used \textbf{Cypress} and \textbf{Kotlin} to write service-level and unit tests to catch regressions and ensure front-end UI and data pipeline integrity.
+        \end{itemize}
+    \end{itemize}
+    \end{minipage}
+}  
+\end{tabularx}
+
+%IESO
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\small{\textbf{Meter Data Management Intern,} \textit{Independent Electricity System Operator} & \small{\hfill Jun - Aug 2021, Toronto, ON} 
+} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+As the Crown corporation responsible for operating/directing the electricity market in Ontario, the IESO gathers and monitors data from industrial customers throughout the province.
+\begin{minipage}[t][2cm]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Leveraged my technical knowledge to propose and conduct research into how \textbf{machine learning} could be used to improve existing processes. 
+        \item Highlighted benefits of \text{supervised learning} to detect data anomalies using IESO’s historical datasets.
+        \item Worked with peers to review Meter Service Provider data, ensuring correctness of meter billing reports.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx} \\
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Radio Transceiver} & \hfill Jan - April 2022 -  \href{https://www.github.com/destefy/portfolio}{Link to Pictures} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+As part of my 2nd year Hardware Design class (ECE295), I worked on a Team of 3 students to design, build and test two radio transceiver (transmitter + receiver) components. Specific contributions included,
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize} [nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item Used \textbf{Altium} and \textbf{Multisim} to design the limiter, filter, mixer, and amplifier radio receiver circuits.
+        \item Demonstrated successful integration of our subcircuits into a functioning radio receiver.
+        \item Communicated the team’s design to technical and non-technical audiences through presentations
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\section{Other}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Citizenship: &  \normalsize{Canadian and American}\\
+Languages:  &  \normalsize{English (Native Proficiency), French (Native Proficiency), Polish (Beginner)}\\  
+\end{tabularx}
+
+
+\end{document}
