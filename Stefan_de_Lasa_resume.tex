@@ -54,7 +54,12 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{5pt}{4pt}
+\titlespacing*{\section}{0pt}{0pt}{2pt}
+
+% \titleformat*{\tabularx}{}
+% \titlespacing*{\tabularx}{0pt}{0pt}{0pt}
+
+\setlist[itemize]{nosep, topsep = 1pt, after=\strut, leftmargin=1em, itemsep=3pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -65,6 +70,7 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
+\setlength{\parskip}{5pt}
 
 %for social icons
 \usepackage{fontawesome5}
@@ -117,11 +123,11 @@ Hardware Tools: & \normalsize{Verilog, Multisim, ModelSim, Altium, Typhoon}
 
 %PointClickCare
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Software Engineer Intern,} \textit{PointClickCare (PCC)} & \hfill May - Aug 2022, Toronto, ON \\[3.75pt]
+\textbf{Software Engineer Intern,} \textit{PointClickCare (PCC).} & \hfill May - Aug 2022, Toronto, ON \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 PCC creates healthcare software solutions to assist vulnerable populations with out-of-hospital care.
 \begin{minipage}[t][5.6cm]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \begin{itemize}
     \item Migrated the US “Care Insights” application to Canadian markets.
         \begin{itemize}
         \item Configured a backend \textbf{Spring Boot} controller to determine session permissions via API calls. Permissions were then used across different application workflows (e.g., exposing links, etc.)
@@ -135,16 +141,15 @@ PCC creates healthcare software solutions to assist vulnerable populations with 
     \end{itemize}
     \end{minipage}
 }  
-\end{tabularx}
+\end{tabularx} \\ \\
 
 %IESO
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\small{\textbf{Meter Data Management Intern,} \textit{Independent Electricity System Operator} & \small{\hfill Jun - Aug 2021, Toronto, ON} 
-} \\[3.75pt]
+\small{\textbf{Meter Data Management Intern,} \textit{Independent Electricity System Operator.} & \small{\hfill Jun - Aug 2021, Toronto, ON} } \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
-As the Crown corporation responsible for operating/directing the electricity market in Ontario, the IESO gathers and monitors data from industrial customers throughout the province.
+As the Crown corporation responsible for operating/directing the electricity market in Ontario, the IESO gathers and monitors data from industrial customers throughout the province. 
 \begin{minipage}[t][2cm]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \begin{itemize}
         \item Leveraged my technical knowledge to propose and conduct research into how \textbf{machine learning} could be used to improve existing processes. 
         \item Highlighted benefits of \text{supervised learning} to detect data anomalies using IESO’s historical datasets.
         \item Worked with peers to review Meter Service Provider data, ensuring correctness of meter billing reports.
@@ -156,19 +161,49 @@ As the Crown corporation responsible for operating/directing the electricity mar
 %Projects
 \section{Projects}
 
+%messaging app
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Radio Transceiver} & \hfill Jan - April 2022 -  \href{https://www.github.com/destefy/portfolio}{Link to Pictures} \\[3.75pt]
+\textbf{Messaging App,} & \hfill Nov - Dec 2022 - \href{https://www.github.com/destefy/portfolio}{Link} \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
-As part of my 2nd year Hardware Design class (ECE295), I worked on a team of 3 students to design, build and test two radio transceiver (transmitter + receiver) components. Specific contributions included,
+\raggedright{I used socket programming and \textbf{TCP connections}, to make a client and server program that used a system of acknowledgements. The program:}
 \begin{minipage}[t]{\linewidth}
-    \begin{itemize} [nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Used \textbf{Altium} and \textbf{Multisim} to design the limiter, filter, mixer, and amplifier radio receiver circuits.
-        \item Demonstrated successful integration of our subcircuits into a functioning radio receiver.
-        \item Communicated the team’s design to technical and non-technical audiences through presentations
+    \begin{itemize}
+        \item Let users create and join sessions, where they could broadcast messages to other users.
+        \item Implemented features like private messaging, listing active users, and password-protected login.
+    \end{itemize}
+    \end{minipage}
+} \\
+\end{tabularx}
+
+% Dr. Mario
+\begin{tabularx}{\textwidth}{ @{}l r@{} }
+\textbf{Dr. Mario game,} & \hfill Jan - Apr 2022 - \href{https://youtu.be/Sxyitkk7tpI}{Video Demonstration} \\[3.75pt] 
+\multicolumn{2}{@{}X@{}}{
+\raggedright{I recreated the popular NES game, Dr. Mario, on a DE1-SoC board using \textbf{C} and the CPUlator simulator. Dr. Mario is a tetris-like game where you move falling pills to eliminate viruses.}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[topsep = 1pt]
+        \item Designed algorithms to control the pills, collisions, and detecting four of the same colour in a row.
+        \item Detected \textbf{interrupts} from a keyboard and timers.
     \end{itemize}
     \end{minipage}
 }
-\end{tabularx}
+\end{tabularx} 
+
+
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Radio Transceiver} & \hfill Jan - April 2022 -  \href{https://www.github.com/destefy/portfolio}{Link to Pictures} \\[3.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% As part of my 2nd year Hardware Design class (ECE295), I worked on a team of 3 students to design, build and test two radio transceiver (transmitter + receiver) components. Specific contributions included,
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize} [nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item Used \textbf{Altium} and \textbf{Multisim} to design the limiter, filter, mixer, and amplifier radio receiver circuits.
+%         \item Demonstrated successful integration of our subcircuits into a functioning radio receiver.
+%         \item Communicated the team’s design to technical and non-technical audiences through presentations
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
 
 \section{Other}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
