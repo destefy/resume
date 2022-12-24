@@ -53,11 +53,8 @@
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{0pt}{2pt}
-
-% \titleformat*{\tabularx}{}
-% \titlespacing*{\tabularx}{0pt}{0pt}{0pt}
 
 \setlist[itemize]{nosep, topsep = 1pt, after=\strut, leftmargin=1em, itemsep=3pt}
 
@@ -78,10 +75,12 @@
 %debug page outer frames
 %\usepackage{showframe}
 
+\setlength{\textfloatsep}{0.1cm}
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
+\raggedright
 
 % non-numbered pages
 \pagestyle{empty} 
@@ -97,18 +96,19 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Stefan de Lasa} \\[7.5pt]
+\LARGE{Stefan de Lasa} \\[7.5pt]
 \href{https://www.github.com/destefy/portfolio}{\raisebox{-0.05\height}\faGithub\ destefy } \ $|$ \ 
 \href{https://www.linkedin.com/in/stefandelasa}{\raisebox{-0.05\height}\faLinkedin\ stefandelasa} \ $|$ \ 
 \href{mailto:stefan.delasa@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ stefan.delasa@gmail.com} \ $|$ \ 
 \href{tel:+6479208916}{\raisebox{-0.05\height}\faMobile \ +1(647)-920-8916} \\
 \end{tabularx}
 
-
 % Education
 \section{Education}
-Faculty of Applied Science \& Eng., BASc - Computer Engineering, University of Toronto, 2020-2025. 
-Seasonal GPA: 4.0 / 4.0, Cumulative GPA: 3.81 / 4.0, Dean’s Honour List.
+% \begin{tabularx}{\linewidth}{@{}l X @{}}
+University of Toronto, Bachelor of Applied Science \& Engineering - Computer Engineering \hfill{2020-2025}
+\\ Seasonal GPA: 4.0 / 4.0, Cumulative GPA: 3.81 / 4.0 (Dean’s Honour List)
+% \end{tabularx}
     
 % Skills
 \section{Skills}
@@ -121,60 +121,53 @@ Hardware Tools: & \normalsize{Verilog, Multisim, ModelSim, Altium, Typhoon}
 % Experience
 \section{Work Experience}
 
-% %PointClickCare
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf{Software Engineer Intern,} \textit{PointClickCare (PCC).} & \hfill May - Aug 2022, Toronto, ON \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{
-% PCC creates healthcare software solutions to assist vulnerable populations with out-of-hospital care.
-% \begin{minipage}[t][5.6cm]{\linewidth}
-%     \begin{itemize}
-%     \item Migrated the US “Care Insights” application to Canadian markets. Configured a backend \textbf{Spring Boot} controller to determine session permissions via API calls.
-%     \item Worked in a 10 person \textbf{Agile development} team on a suite of applications for nursing facilities.
-%         \begin{itemize}
-%         \item Used \textbf{React} and \textbf{Typescript} to develop front-end features to ease creation/modification of patient screening templates. Several internal users mentioned improved usability from this work.
-%         \item To improve patient screening template effectiveness, I extracted session information about which end-user workflow suggestions were followed or ignored. I then sent this information to PCC’s Pendo analytics system for subsequent analysis and template refinement.
-%         \item Used \textbf{Cypress} and \textbf{Kotlin} to write service-level and unit tests to catch regressions and ensure front-end UI and data pipeline integrity.
-%         \end{itemize}
-%     \end{itemize}
-%     \end{minipage}
-% }  
-% \end{tabularx} \\ \\
-
+%PointClickCare
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Software Engineer Intern,} \textit{PointClickCare (PCC).} & \hfill May - Aug 2022, Toronto, ON \\[3.75pt]
+\textbf{Software Engineer Intern,} \textit{PointClickCare (PCC).} & \hfill \textbf{May - Aug 2022, Toronto, ON} \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
-PCC creates healthcare software solutions to assist vulnerable populations with out-of-hospital care.
-\begin{minipage}[t][5.6cm]{\linewidth}
+    PCC creates healthcare software solutions to assist vulnerable populations with out-of-hospital care.
+    \begin{minipage}[t]{\linewidth}
     \begin{itemize}
-    \item Migrated the US “Care Insights” application to Canadian markets.
-        \begin{itemize}
-        \item Configured a backend \textbf{Spring Boot} controller to determine session permissions via API calls. Permissions were then used across different application workflows (e.g., exposing links, etc.)
-        \end{itemize}
-    \item Worked in a 10 person \textbf{Agile development} team on a suite of applications for nursing facilities.
-        \begin{itemize}
-        \item Used \textbf{React} and \textbf{Typescript} to develop front-end features to ease creation/modification of patient screening templates. Several internal users mentioned improved usability from this work.
-        \item To improve patient screening template effectiveness, I extracted session information about which end-user workflow suggestions were followed or ignored. I then sent this information to PCC’s Pendo analytics system for subsequent analysis and template refinement.
-        \item Used \textbf{Cypress} and \textbf{Kotlin} to write service-level and unit tests to catch regressions and ensure front-end UI and data pipeline integrity.
-        \end{itemize}
+        \raggedright{
+        \item Migrated the US “Care Insights” application to Canadian markets. Configured a backend \textbf{Spring Boot} controller to determine session permissions via API calls.
+        \item Used \textbf{React} and \textbf{Typescript} in a \textbf{Agile development} team to develop front-end features to ease modification of patient screening templates. Several users mentioned improved usability from this.
+        \item To improve patient screening template effectiveness, I extracted session information about which end-user workflow suggestions were followed or ignored. I then sent this information to PCC’s Pendo analytics system for subsequent analysis and template refinement.}
+        \item Used \textbf{Cypress} and \textbf{Kotlin} to write service/unit level tests to ensure UI and data pipeline integrity.
     \end{itemize}
     \end{minipage}
 }  
-\end{tabularx} \\ \\
+\end{tabularx}
 
 %IESO
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\small{\textbf{Meter Data Management Intern,} \textit{Independent Electricity System Operator.} & \small{\hfill Jun - Aug 2021, Toronto, ON} } \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\raggedright{As the Crown corporation responsible for operating/directing the electricity market in Ontario, the IESO gathers and monitors data from industrial customers throughout the province.}
-\begin{minipage}[t][2cm]{\linewidth}
+    \textbf{Data Management Intern}, \small{\textit{Independent Electricity System Operator.}} & \hfill \textbf{Jun - Aug 2021, Toronto, ON} \\[3.75pt]
+    \multicolumn{2}{@{}X@{}}{
+    \raggedright{As the Crown corporation responsible for operating/directing the electricity market in Ontario, the IESO gathers and monitors data from industrial customers throughout the province.}
+    \begin{minipage}[t]{\linewidth}
     \begin{itemize}
-        \item Leveraged my technical knowledge to propose and conduct research into how \textbf{machine learning} could be used to improve existing processes. 
-        \item Highlighted benefits of \text{supervised learning} to detect data anomalies using IESO’s historical datasets.
+        \item Leveraged my technical knowledge to propose how \textbf{machine learning} could improve existing processes. 
+        \item Highlighted benefits of \textbf{supervised learning} to detect data anomalies using IESO’s historical datasets.
         \item Worked with peers to review Meter Service Provider data, ensuring correctness of meter billing reports.
     \end{itemize}
     \end{minipage}
 }
-\end{tabularx} \\
+\end{tabularx}
+    
+\\[-10pt]
+
+%Research Assistant
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Assistant,} \textit{York University.} & \hfill \textbf{Jul - Aug 2018, Toronto, ON}\\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+    Permeable pavements are a promising method to control stormwater run-off. Dr. Usman Khan’s group is investigating different \textbf{ML techniques} from mobile device input to categorize different paved surfaces.
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+        \item Conducted experiments to gather important properties of different paved surfaces.
+        \item Analyzed and inputting results into a database for subsequent training by a \textbf{ML model}.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
 
 %Projects
 \section{Projects}
@@ -183,8 +176,8 @@ PCC creates healthcare software solutions to assist vulnerable populations with 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Messaging App,} \textit{Computer Networks Class}& \hfill Nov - Dec 2022 - \href{https://www.github.com/destefy/portfolio}{Link} \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
-\raggedright{Used \textbf{TCP socket programming} in \textbf{C} to make a client and server program that used a system of acknowledgements to communicate. The program:}
-\begin{minipage}[t]{\linewidth}
+    \raggedright{Used \textbf{TCP socket programming} in \textbf{C} to make a client and server program that used a system of acknowledgements to communicate. The program:}
+    \begin{minipage}[t]{\linewidth}
     \begin{itemize}
         \item Let users create and join sessions, where they could broadcast messages to other users.
         \item Implemented features like private messaging, listing active users, and password-protected login.
