@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Stefan_de_Lasa_resume_1_page.blg'
+[67] biber-darwin:340> INFO - === Tue May  2, 2023, 15:33:38
+[82] Biber.pm:418> INFO - Reading 'Stefan_de_Lasa_resume_1_page.bcf'
+[164] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[177] bbl.pm:654> INFO - Writing 'Stefan_de_Lasa_resume_1_page.bbl' with encoding 'UTF-8'
+[177] bbl.pm:757> INFO - Output to Stefan_de_Lasa_resume_1_page.bbl
+[177] Biber.pm:130> WARN - The file 'Stefan_de_Lasa_resume_1_page.bcf' does not contain any citations!
+[177] Biber.pm:132> INFO - WARNINGS: 1
