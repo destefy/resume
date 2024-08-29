@@ -1,14 +1,18 @@
 \begin{tabularx}{\textwidth}{ @{}l r@{} }
-    \textbf{Software Development Intern}, \small{\textit{CentML,}} Toronto, ON & \hfill \textbf{Sept 2023 - Present} \\[3.75pt]
+    \textbf{Software Development Intern}, \small{\textit{CentML,}} Toronto, ON & \hfill \textbf{Sept 2023 - Aug 2024 \href{https://github.com/CentML/centml-python-client}{\faLink}} \\[3.75pt]
     \multicolumn{2}{@{}X@{}}{
     \raggedright{
-        CentML is creating tools to make machine learning (ML) training and inference more affordable and efficient. 
+        CentML is creating tools to make machine learning (ML) inference and training more affordable and efficient. 
     } \\[3.75pt]
     \begin{minipage}[t]{\linewidth}
         \begin{itemize}
-            \item Used the \textbf{Python FastAPI} library to create a compilation server for users to compile ML models remotely.
+            \item Was the sole creator of the remote compilation project, building the infrastructure that allowed user's ML models to be compiled on a server. 
+            Please click \href{https://github.com/CentML/centml-python-client}{here} to see the public \textbf{Python} client.
+            \item Created both a \textbf{Kubernetes}-managed (\textbf{Dockerized}) and a locally-hosted version of the compilation server.
+            \item Developped a method to uniquely and consistently hash various ML models, including \textbf{LLMs} and \textbf{CNNs}.
             \item Communicated with a \textbf{PostgreSQL} database and \textbf{AWS' S3} to upload user submitted models.
-            \item Worked to hash and serialize various ML models, including \textbf{LLMs} and \textbf{CNNs}.
+            \item Wrote integration tests the ensure the compilation server was correctly integrated into CentML's platform.
+            % \item Used the \textbf{Python FastAPI} library to create a compilation server for users to compile ML models remotely.
         \end{itemize}
     \end{minipage}
     }
