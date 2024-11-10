@@ -5,6 +5,7 @@
 *.log
 *.out
 *.xml
+.DS_Store
 ./.DS_Store
 ./Stefan_de_Lasa_resume_2_page.pdf
 ./Stefan_de_Lasa_resume_2_page.tex
