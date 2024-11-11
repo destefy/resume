@@ -1,15 +1,12 @@
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-    \textbf{Programmable Compass} \textit{Personal Project}& \hfill \textbf{April 2023 \href{https://github.com/destefy/portfolio\#programmable-digital-compass}{\faLink}} \\[3pt]
+    \textbf{Programmable Compass} & \hfill \textbf{April 2023 \href{https://github.com/destefy/portfolio\#programmable-digital-compass}{\faLink}} \\[3pt]
     \multicolumn{2}{@{}X@{}}{
-    \raggedright{For my Computer Hardware class’ optional project, I built a compass that can be programmed to point to any location. Using a STM32NUCLEO-F446ZE microcontroller.\\[3.75pt]
-    \begin{minipage}[t]{\linewidth}
-        \begin{itemize} [nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-            \item Used a GY-NEO6MV GPS module to receive and parse GPS data using USART communication and Direct Memory Access (DMA).
-            \item Communicated via I2C with a HMC5883L magnetonomer to read magnet field data to determine my compass’ orientation
-            \item Used Pulse-Width-Modulation (PWM) to display the direction and distance to the programmed location on a NEOPixel Ring.
-        \end{itemize}
-        \end{minipage}
-        }
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize} [nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                \item Used a GPS module to receive and parse location data using USART communication and Direct Memory Access.
+                \item Communicated via I2C with a magnetonomer to read magnet field data to determine my compass' orientation.
+                \item Used Pulse-Width-Modulation to display the direction and distance to the programmed location on a LED ring.
+            \end{itemize}
+            \end{minipage}
     }
-    \end{tabularx}
-    \\[10pt]
+\end{tabularx}
