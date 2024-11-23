@@ -1,6 +1,7 @@
-build: Stefan_de_Lasa_resume_1_page.tex Stefan_de_Lasa_cv.tex
+build: Stefan_de_Lasa_resume_1_page.tex Stefan_de_Lasa_cv.tex Stefan_de_Lasa_cv_chronological.tex
 	xelatex Stefan_de_Lasa_resume_1_page.tex
 	xelatex Stefan_de_Lasa_cv.tex
+	xelatex Stefan_de_Lasa_cv_chronological.tex
 
 clean: 
 	rm -f *.aux
