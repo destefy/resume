@@ -1,7 +1,6 @@
-build: Stefan_de_Lasa_resume_1_page.tex Stefan_de_Lasa_cv.tex Stefan_de_Lasa_cv_chronological.tex
-	xelatex Stefan_de_Lasa_resume_1_page.tex
-	xelatex Stefan_de_Lasa_cv.tex
-	xelatex Stefan_de_Lasa_cv_chronological.tex
+build:
+	make latex
+	make clean
 
 clean: 
 	rm -f *.aux
@@ -14,3 +13,8 @@ clean:
 	rm -f *.log
 	rm -f *.out
 	rm -f *.xml
+
+latex:
+	xelatex Stefan_de_Lasa_resume_1_page.tex
+	xelatex Stefan_de_Lasa_cv.tex
+	xelatex Stefan_de_Lasa_cv_ethz.tex
