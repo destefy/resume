@@ -1,0 +1,67 @@
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%page formatting (e.g. margins)
+% textwidth: horizontal width of text on page. basically the page width minus left and right margins.
+% \geometry{a4paper, textheight = 760pt, textwidth = 500pt, top = 50pt}
+\geometry{a4paper, textheight = 1000pt, textwidth = 510pt, top = 40pt}
+
+
+% Formatting for section heading
+\titleformat{\section}{
+    \Large              % section size
+    \scshape            % captical letters
+    \raggedright        % section title on left of page
+}{}{0em}{}[\titlerule]
+\titlespacing*{\section}
+    {0pt}   % {left spacing}
+    {4pt}   % {before spacing}
+    {6pt}   % {after spacing}
+
+\setlist[itemize]{nosep, topsep = 2pt, after=\strut, leftmargin=1em, itemsep=3pt}
+
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\setlength{\parskip}{5pt}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+\setlength{\textfloatsep}{0.1cm}
+
