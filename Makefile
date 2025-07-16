@@ -18,3 +18,4 @@ latex:
 	xelatex Stefan_de_Lasa_resume_1_page.tex
 	xelatex Stefan_de_Lasa_cv.tex
 	xelatex Stefan_de_Lasa_cv_cleaner.tex
+	xelatex Stefan_de_Lasa_TA_app.tex
